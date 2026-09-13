@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MARQUEE — put the name up</title>
+  <meta name="description" content="REDLINE studio page. A first HTML file you own if you want to start a business and do not know how, plus a marquee that bills other live sites." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Oswald:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            void: "#05060A",
+            pane: "#0B0D12",
+            frost: "#12151D",
+            mist: "#7A8499",
+            line: "#4D8BFF",
+            heat: "#FF2B3A",
+            paper: "#EEF2F8"
+          },
+          fontFamily: {
+            display: ["Oswald", "Impact", "sans-serif"],
+            serif: ["Source Serif 4", "Georgia", "serif"],
+            mono: ["IBM Plex Mono", "ui-monospace", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #05060A;
+      background-image:
+        radial-gradient(640px 260px at 8% -10%, rgba(77,139,255,.22), transparent 58%),
+        radial-gradient(480px 220px at 100% 0%, rgba(255,43,58,.12), transparent 55%),
+        repeating-linear-gradient(180deg, transparent, transparent 27px, rgba(238,242,248,.018) 28px);
+    }
+    .bulb {
+      box-shadow: 0 0 0 1px rgba(77,139,255,.45), 0 0 14px rgba(77,139,255,.35);
+    }
+    .heat-bulb {
+      box-shadow: 0 0 0 1px rgba(255,43,58,.5), 0 0 14px rgba(255,43,58,.32);
+    }
+    .bill {
+      background: linear-gradient(180deg, rgba(18,21,29,.97), rgba(11,13,18,.9));
+      border: 1px solid rgba(238,242,248,.1);
+    }
+    .bill:hover { border-color: rgba(77,139,255,.42); }
+    .bill-heat {
+      background: linear-gradient(180deg, rgba(255,43,58,.16), rgba(11,13,18,.88));
+      border: 1px solid rgba(255,43,58,.42);
+    }
+    .marquee-frame {
+      border: 2px solid rgba(77,139,255,.35);
+      box-shadow: inset 0 0 0 6px rgba(5,6,10,.9), 0 0 40px rgba(77,139,255,.08);
+    }
+    .reveal { opacity: 0; }
+    textarea::placeholder { color: #7A8499; }
+  </style>
+</head>
+<body class="bg-void text-paper font-serif antialiased">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-void/90 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <a href="#top" class="flex items-center gap-3">
+        <span class="grid h-8 w-8 place-items-center border border-line/70 font-mono text-[10px] tracking-widest text-line">MQ</span>
+        <span class="font-display text-xl tracking-[0.18em]">MARQUEE</span>
+      </a>
+      <nav class="hidden sm:flex items-center gap-6 text-[11px] font-mono uppercase tracking-[0.18em] text-mist">
+        <a href="#lanes" class="hover:text-paper">Lanes</a>
+        <a href="#billed" class="hover:text-paper">Billed</a>
+        <a href="#start" class="text-heat hover:text-paper">Put a name up</a>
+      </nav>
+      <a href="#start" class="sm:hidden border border-heat bg-heat px-3 py-1 text-xs font-display tracking-wide">List</a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 pb-24">
+    <section id="top" class="pt-12 md:pt-16 reveal">
+      <div class="flex flex-wrap items-baseline justify-between gap-3">
+        <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-line">REDLINE · night billing</p>
+        <p class="font-mono text-[11px] uppercase tracking-[0.16em] text-mist">Modern young adults + adults</p>
+      </div>
+      <div class="marquee-frame mt-6 px-4 py-8 md:px-10 md:py-12">
+        <p class="font-mono text-[11px] uppercase tracking-[0.3em] text-mist text-center">Now showing</p>
+        <h1 class="font-display text-[13vw] md:text-[6.4rem] leading-[0.82] tracking-tight text-center mt-3">
+          YOUR NAME<br />
+          ON THE <span class="text-line">MARQUEE</span>.
+        </h1>
+      </div>
+      <p class="mt-7 max-w-2xl text-lg md:text-xl leading-relaxed text-mist">
+        You already decided to start. MARQUEE writes the first HTML file with your name on it,
+        then bills other live rooms on the same board so they are not sitting quiet.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#start" class="inline-flex items-center bg-heat text-paper font-display text-xl tracking-wide px-5 py-3 leading-none hover:bg-line">PUT THE NAME UP</a>
+        <a href="#billed" class="inline-flex items-center border border-white/20 text-paper font-display text-xl tracking-wide px-5 py-3 leading-none hover:border-line hover:text-line">SEE WHO IS BILLED</a>
+      </div>
+      <p class="mt-6 font-mono text-[11px] uppercase tracking-[0.16em] text-mist">Chris · citruswill2@gmail.com · no CMS · you keep the file</p>
+    </section>
+
+    <section id="lanes" class="py-14 reveal">
+      <div class="grid md:grid-cols-12 gap-3">
+        <article class="bill md:col-span-7 p-6 md:p-8">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-heat">Lane A</p>
+              <h2 class="font-display text-5xl md:text-6xl mt-2 leading-none tracking-tight">FIRST FILE</h2>
+            </div>
+            <p class="font-mono text-[11px] text-mist tracking-widest">NO. 001</p>
+          </div>
+          <p class="mt-5 text-lg leading-relaxed text-mist">
+            Send one paragraph. Get a single HTML page. Tailwind, light anime.js, about half a second to load.
+            Drop it on Vercel. Keep it on GitHub. Nobody rents the words back to you.
+          </p>
+          <p class="mt-4 text-mist/80 leading-relaxed">
+            Built for people who want a business and do not know where the first brick goes.
+          </p>
+        </article>
+        <article class="bill md:col-span-5 p-6 md:p-8">
+          <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-line">Lane B</p>
+          <h2 class="font-display text-5xl mt-2 leading-none tracking-tight">THE BILL</h2>
+          <p class="mt-5 text-lg leading-relaxed text-mist">
+            Sites that are already up hang under one masthead. Blue is public. Red is studio heat. Gray waits on its own domain.
+          </p>
+          <p class="mt-4 text-mist/80 leading-relaxed">
+            Iris Onyx is the artist cue. Dee’s lot is the sell-without-a-cart cue. The empty stub is the next name.
+          </p>
+        </article>
+      </div>
+
+      <ol class="mt-3 grid sm:grid-cols-3 gap-3">
+        <li class="bill p-5">
+          <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-mist">01 · copy</p>
+          <h3 class="font-display text-3xl mt-1 tracking-tight">SAY THE NAME</h3>
+          <p class="mt-2 leading-relaxed text-mist">One paragraph. What it is, who it is for, what the landing should do.</p>
+        </li>
+        <li class="bill p-5">
+          <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-mist">02 · file</p>
+          <h3 class="font-display text-3xl mt-1 tracking-tight">OWN THE FILE</h3>
+          <p class="mt-2 leading-relaxed text-mist">You get HTML. No CMS. No rent on the words. GitHub is the cabinet.</p>
+        </li>
+        <li class="bill p-5">
+          <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-mist">03 · light</p>
+          <h3 class="font-display text-3xl mt-1 tracking-tight">HANG IT LIVE</h3>
+          <p class="mt-2 leading-relaxed text-mist">Vercel for the public URL. Then it can sit on this board next to the others.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="billed" class="py-4 reveal">
+      <div class="flex items-end justify-between gap-4 pb-4">
+        <div>
+          <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-mist">Tonight’s board</p>
+          <h2 class="font-display text-6xl md:text-7xl leading-none tracking-tight">BILLED</h2>
+        </div>
+        <p class="hidden sm:block max-w-xs text-right text-sm text-mist leading-snug">Blue is public. Red is studio. Gray waits on its own URL.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        <a class="bill p-5 group" href="https://iris0nyx.com" target="_blank" rel="noopener">
+          <div class="flex items-center justify-between">
+            <span class="inline-block h-2 w-2 rounded-full bg-line bulb" title="live"></span>
+            <span class="font-mono text-[10px] uppercase tracking-[0.16em] text-line">live</span>
+          </div>
+          <h3 class="font-display text-4xl mt-4 leading-none tracking-tight group-hover:text-line">IRIS ONYX</h3>
+          <p class="font-mono text-[11px] mt-2 text-line">iris0nyx.com</p>
+          <p class="mt-3 leading-snug text-mist">Goth pop from Utah. The softest knife. Cue when the brief is an artist.</p>
+        </a>
+
+        <a class="bill p-5 group" href="https://dnc-computerz.vercel.app" target="_blank" rel="noopener">
+          <div class="flex items-center justify-between">
+            <span class="inline-block h-2 w-2 rounded-full bg-line bulb" title="live"></span>
+            <span class="font-mono text-[10px] uppercase tracking-[0.16em] text-line">live</span>
+          </div>
+          <h3 class="font-display text-4xl mt-4 leading-none tracking-tight group-hover:text-line">DNC COMPUTERZ</h3>
+          <p class="font-mono text-[11px] mt-2 text-line">dnc-computerz.vercel.app</p>
+          <p class="mt-3 leading-snug text-mist">Dee’s lot. Items on the table. A first page that sells without a cart.</p>
+        </a>
+
+        <a class="bill p-5 group" href="https://sameweekhq.vercel.app" target="_blank" rel="noopener">
+          <div class="flex items-center justify-between">
+            <span class="inline-block h-2 w-2 rounded-full bg-heat heat-bulb" title="studio"></span>
+            <span class="font-mono text-[10px] uppercase tracking-[0.16em] text-heat">studio</span>
+          </div>
+          <h3 class="font-display text-4xl mt-4 leading-none tracking-tight group-hover:text-heat">REDLINE</h3>
+          <p class="font-mono text-[11px] mt-2 text-heat">sameweekhq.vercel.app</p>
+          <p class="mt-3 leading-snug text-mist">The shop that writes these drafts. That domain is currently serving REDLINE.</p>
+        </a>
+
+        <a class="bill p-5 group" href="https://daytape.vercel.app" target="_blank" rel="noopener">
+          <div class="flex items-center justify-between">
+            <span class="inline-block h-2 w-2 rounded-full bg-line bulb" title="live"></span>
+            <span class="font-mono text-[10px] uppercase tracking-[0.16em] text-line">live</span>
+          </div>
+          <h3 class="font-display text-4xl mt-4 leading-none tracking-tight group-hover:text-line">DAYTAPE</h3>
+          <p class="font-mono text-[11px] mt-2 text-line">daytape.vercel.app</p>
+          <p class="mt-3 leading-snug text-mist">Podcast and vlog first-draft. A tape you can actually open.</p>
+        </a>
+
+        <a class="bill p-5 group" href="https://github.com/citruswill2-cmd/sameweek" target="_blank" rel="noopener">
+          <div class="flex items-center justify-between">
+            <span class="inline-block h-2 w-2 rounded-full bg-mist" title="not public"></span>
+            <span class="font-mono text-[10px] uppercase tracking-[0.16em] text-mist">not public</span>
+          </div>
+          <h3 class="font-display text-4xl mt-4 leading-none tracking-tight text-paper/70">SAMEWEEK</h3>
+          <p class="font-mono text-[11px] mt-2 text-mist">github.com/citruswill2-cmd/sameweek</p>
+          <p class="mt-3 leading-snug text-mist">Needs its own live URL. sameweek.vercel.app currently serves CAST, so it stays gray.</p>
+        </a>
+
+        <a class="bill p-5 group" href="https://github.com/citruswill2-cmd/laughline" target="_blank" rel="noopener">
+          <div class="flex items-center justify-between">
+            <span class="inline-block h-2 w-2 rounded-full bg-mist" title="not public"></span>
+            <span class="font-mono text-[10px] uppercase tracking-[0.16em] text-mist">not public</span>
+          </div>
+          <h3 class="font-display text-4xl mt-4 leading-none tracking-tight text-paper/70">LAUGHLINE</h3>
+          <p class="font-mono text-[11px] mt-2 text-mist">github.com/citruswill2-cmd/laughline</p>
+          <p class="mt-3 leading-snug text-mist">Comedy first-draft. laughline.vercel.app is 404 until that project is public.</p>
+        </a>
+
+        <a class="bill-heat p-5 group sm:col-span-2 lg:col-span-3" href="#start">
+          <div class="flex items-center justify-between">
+            <span class="inline-block h-2 w-2 rounded-full bg-heat heat-bulb" title="open slot"></span>
+            <span class="font-mono text-[10px] uppercase tracking-[0.16em] text-heat">open slot</span>
+          </div>
+          <h3 class="font-display text-4xl md:text-5xl mt-4 leading-none tracking-tight group-hover:text-heat">HOLD UNDER YOUR NAME</h3>
+          <p class="mt-3 max-w-2xl leading-snug text-mist">Empty bulb on the marquee. File the paragraph and the next room gets marked.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="start" class="py-14 reveal">
+      <div class="grid md:grid-cols-12 gap-8 bill-heat p-6 md:p-10">
+        <div class="md:col-span-5">
+          <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-heat">Window</p>
+          <h2 class="font-display text-6xl leading-none mt-2 tracking-tight">PUT A NAME UP</h2>
+          <p class="mt-4 text-lg leading-relaxed text-mist">
+            One field. It opens mail to citruswill2@gmail.com with the paragraph already in the body.
+            No account. No form host. You keep the sentence.
+          </p>
+        </div>
+        <form id="brief" class="md:col-span-7">
+          <label for="para" class="font-mono text-[11px] uppercase tracking-[0.18em] text-mist">The paragraph</label>
+          <textarea id="para" name="body" required rows="7" class="mt-2 w-full bg-void border border-white/15 p-4 text-lg leading-relaxed text-paper focus:outline-none focus:border-line" placeholder="I decided to start ______. It is for ______. When someone lands they should ______."></textarea>
+          <button type="submit" class="mt-4 bg-line text-void font-display text-2xl tracking-wide px-6 py-3 hover:bg-heat hover:text-paper">SEND TO THE WINDOW</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-6 flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono uppercase tracking-[0.16em] text-mist">
+      <span>MARQUEE · client-owned HTML</span>
+      <span>void #05060A · line #4D8BFF · heat #FF2B3A</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" defer></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      var nodes = document.querySelectorAll(".reveal");
+      if (window.anime) {
+        anime({
+          targets: ".reveal",
+          opacity: [0, 1],
+          translateY: [12, 0],
+          delay: anime.stagger(70),
+          duration: 380,
+          easing: "easeOutQuad"
+        });
+      } else {
+        nodes.forEach(function (el) { el.style.opacity = "1"; });
+      }
+
+      document.getElementById("brief").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var text = document.getElementById("para").value.trim();
+        if (!text) return;
+        var href = "mailto:citruswill2@gmail.com?subject=" +
+          encodeURIComponent("MARQUEE brief") +
+          "&body=" + encodeURIComponent(text);
+        window.location.href = href;
+      });
+    });
+  </script>
+</body>
+</html>
